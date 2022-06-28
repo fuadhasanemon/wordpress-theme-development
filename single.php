@@ -17,20 +17,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="post-title"> <a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+                        <h2 class="post-title"> <?php the_title(); ?></h2>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <p>
-                            <strong><?php the_author(); ?></strong><br />
-                            <?php echo get_the_date(); ?>
-                        </p>
 
-                        <?php echo get_the_tag_list( "<ul class=\"list-unstyled\"><li>", "</li><li>", "</li></ul>"); ?>
-                        
-                    </div>
-                    <div class="col-md-8">
+                    <?php echo get_the_tag_list( "<ul class=\"list-unstyled\"><li>", "</li><li>", "</li></ul>"); ?>
+                </div>
+
+                <div class="row">
+                   
+                    <div class="col-md-12">
                         <p>
                         <?php 
                             if (has_post_thumbnail()) {
@@ -40,13 +35,27 @@
                         ?>
                         </p>
 
+                        <p>
+                            <strong><?php the_author(); ?></strong><br />
+                            <?php echo get_the_date(); ?>
+                        </p>
+
+
                         <?php 
                         
-                            the_excerpt();
+                            the_content();
                         
                         ?>
 
                     </div>
+
+                    <?php if(comments_open()){ ?>
+
+                        <div class="col-md-12">
+                            <?php comments_template( ); ?>
+                        </div>
+
+                    <?php } ?>
                 </div>
 
             </div>
@@ -69,8 +78,8 @@
 
 
     </div>
-
-    <?php get_footer( ); ?>
+  
+    <?php get_footer(); ?>
 
 </body>
 
