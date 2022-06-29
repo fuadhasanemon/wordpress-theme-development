@@ -9,6 +9,20 @@
                         <a href="<?php echo site_url(); ?>"><?php bloginfo( "name" ) ?></a>
                     </h1>
                 </div>
+
+                <div class="col-md-12">
+                    <div class="navigation">
+                        <?php wp_nav_menu(
+
+                                array(
+                                    'menu_class'           => 'inline text-center',
+                                    'menu_id'              => 'topmenucontainer',
+                                    'theme_location'       => 'topmenu',
+                                )
+
+                            ); ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
