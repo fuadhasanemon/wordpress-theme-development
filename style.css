@@ -13,6 +13,7 @@ Text Domain: lwhh
 
 body {
     overflow-x: hidden;
+	list-style: none;
 }
 
 .pagination_post {
@@ -20,6 +21,10 @@ body {
     justify-content: center;
     margin-bottom: 50px;
 
+}
+
+li {
+	
 }
 
 img {
@@ -78,6 +83,15 @@ h2.post-title {
 
 .tags li{
     color: #3D9970;
+}
+
+
+/* Top menu styling */
+
+#topmenu_container , #footer_container {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
 
 
