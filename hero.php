@@ -9,6 +9,38 @@
                         <a href="<?php echo site_url(); ?>"><?php bloginfo( "name" ) ?></a>
                     </h1>
                 </div>
+
+                <div class="col-md-12">
+                    <div class="navigation">
+                        <?php
+
+                            wp_nav_menu( 
+                                array(
+                                    'menu'                 => '',
+                                    'container'            => 'div',
+                                    'container_class'      => '',
+                                    'container_id'         => '',
+                                    'container_aria_label' => '',
+                                    'menu_class'           => 'menu list-inline text-center',
+                                    'menu_id'              => 'topmenu_container',
+                                    'echo'                 => true,
+                                    'fallback_cb'          => 'wp_page_menu',
+                                    'before'               => '',
+                                    'after'                => '',
+                                    'link_before'          => '',
+                                    'link_after'           => '',
+                                    'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'item_spacing'         => 'preserve',
+                                    'depth'                => 0,
+                                    'walker'               => '',
+                                    'theme_location'       => 'topmenu',
+                                )
+                             
+                            );
+
+                        ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
