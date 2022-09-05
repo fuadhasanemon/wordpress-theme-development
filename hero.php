@@ -12,9 +12,8 @@
 
                 <div class="col-md-12">
                     <div class="navigation">
-<<<<<<< HEAD
-                        <?php
-
+                       <?php
+                             /* 
                             wp_nav_menu( 
                                 array(
                                     'menu'                 => '',
@@ -37,10 +36,10 @@
                                     'theme_location'       => 'topmenu',
                                 )
                              
-                            );
+                            ); */
 
-                        ?>
-=======
+                        ?> 
+
                         <?php wp_nav_menu(
 
                                 array(
@@ -50,7 +49,6 @@
                                 )
 
                             ); ?>
->>>>>>> cb63854d48816e5c5c90a1f486d0896b58c83c30
                     </div>
                 </div>
             </div>
