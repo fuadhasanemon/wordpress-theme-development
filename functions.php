@@ -23,6 +23,9 @@ function lwhh_assets()
 {
     wp_enqueue_style('lwhh_style', get_stylesheet_uri());
     wp_enqueue_style('assets_bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+    wp_enqueue_style('featherlight_css', '//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css');
+
+    wp_enqueue_script('featherlight_js', '//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js', array("jquery"), "0.0.1", true );
 }
 
 
